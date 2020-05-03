@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/liaotian_bg"
+    android:orientation="vertical" >
+
+    <!-- 页头 -->
+
+    <RelativeLayout
+        android:id="@+id/chat_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#817ECB" >
+
+        <!-- 返回 -->
+
+        <ImageView
+            android:id="@+id/c_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/imageview_selector" />
+
+        <!-- 聊天对象 -->
+
+        <TextView
+            android:id="@+id/chatted_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/c_back"
+            android:textColor="#000"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <!-- 内容布局 -->
+
+    <ListView
+        android:id="@+id/liaotian_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#0000" >
+    </ListView>
+    <!-- listview无内容时显示 -->
+
+    <TextView
+        android:id="@+id/liaotian_text_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/listview_tip"
+        android:textColor="#B22222"
+        android:textSize="18sp" />
+    <!-- 发送布局 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/jiahao_button"
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:background="@drawable/buttonshape"
+            android:text="@string/jiahao"
+            android:textColor="@color/main_color_white"
+            android:textSize="22sp" >
+        </Button>
+
+        <EditText
+            android:id="@+id/input_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/inputtext"
+            android:maxLines="2"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ed6d48"
+            android:text="@string/fasong"
+            android:textColor="@color/main_color_white" />
+    </LinearLayout>
+    <!-- 底端布局 -->
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@layout/biankuang"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <!-- 录音 -->
+
+        <RelativeLayout
+            android:id="@+id/part1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp" >
+
+            <ImageButton
+                android:id="@+id/img_arm"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/voice" />
+
+            <TextView
+                android:id="@+id/arm_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_arm"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/luyin"
+                android:textColor="#000"
+                android:textSize="18sp" />
+        </RelativeLayout>
+        <!-- 拍照 -->
+
+        <RelativeLayout
+            android:id="@+id/part2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp" >
+
+            <ImageButton
+                android:id="@+id/img_img"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/photo_list" />
+
+            <TextView
+                android:id="@+id/img_text"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/img_img"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/paizhao"
+                android:textColor="#000"
+                android:textSize="18sp" />
+        </RelativeLayout>
+        <!-- 拍摄 -->
+
+        <RelativeLayout
+            android:id="@+id/part3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp" >
+
+            <ImageButton
+                android:id="@+id/img_video"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/video_list" />
+
+            <TextView
+                android:id="@+id/video_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_video"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/paishe"
+                android:textColor="#000"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <VideoView
+        android:id="@+id/l_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</LinearLayout>

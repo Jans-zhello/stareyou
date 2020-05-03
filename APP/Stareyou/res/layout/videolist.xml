@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <!-- 页头 -->
+
+    <RelativeLayout
+        android:id="@+id/videolist_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:background="#EEEEE0"
+        >
+
+        <!-- 返回 -->
+
+        <ImageView
+            android:id="@+id/videolist_back"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:src="@drawable/imageview_selector" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/shipin"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_videolist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/videolist_top"
+        android:cacheColorHint="#000000"
+        android:divider="@drawable/line"
+        android:dividerHeight="0.2dp"
+        android:scrollbars="vertical" />
+
+    <RelativeLayout
+        android:id="@+id/empty_text_tip_vlist"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/videolist_top"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/no_content"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/no_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/no_content"
+            android:layout_toRightOf="@+id/no_content"
+            android:text="没有内容呀"
+            android:textColor="#EEEEE0"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

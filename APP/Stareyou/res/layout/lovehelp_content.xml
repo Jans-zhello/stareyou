@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/help_bg"
+    android:orientation="vertical" >
+
+    <!-- 个人帮助内容部分 -->
+
+    <RelativeLayout
+        android:id="@+id/part1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- 用户头像 -->
+
+        <ImageView
+            android:id="@+id/help_usericon"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/boy" />
+
+        <!-- 用户名 -->
+
+        <TextView
+            android:id="@+id/needhelp_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/help_usericon"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+        <!-- 需要帮助 -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/needhelp_username"
+            android:text="@string/needhelp"
+            android:textColor="#8B658B"
+            android:textSize="15sp" />
+        <!-- 帮助标题 -->
+
+        <TextView
+            android:id="@+id/help_title_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/help_usericon"
+            android:layout_below="@id/needhelp_username"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/help_usericon"
+            android:textColor="#8B658B"
+            android:textSize="15sp" />
+        <!-- 时间 -->
+
+        <TextView
+            android:id="@+id/help_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:textColor="#000000"
+            android:textSize="16dp" />
+        <!-- 帮助过的人的数量 -->
+
+        <TextView
+            android:id="@+id/helpuser_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/help_usericon"
+            android:textColor="#efa608" />
+        <!-- 曾帮助过他 -->
+
+        <TextView
+            android:id="@+id/cengjing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/help_usericon"
+            android:layout_toRightOf="@id/helpuser_number"
+            android:text="@string/helphe"
+            android:textColor="#8B658B" />
+        <!-- 好评度 -->
+
+        <TextView
+            android:id="@+id/helpuser_assess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/help_usericon"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/cengjing"
+            android:text="@string/haopingdu"
+            android:textColor="#8B658B" />
+        <!-- 具体好评度 -->
+
+        <TextView
+            android:id="@+id/detail_assess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/help_usericon"
+            android:layout_toRightOf="@id/helpuser_assess"
+            android:textColor="#efa608" />
+        <!-- 百分号 -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/help_usericon"
+            android:layout_toRightOf="@id/detail_assess"
+            android:text="@string/baifenhao"
+            android:textColor="#efa608" />
+    </RelativeLayout>
+    <!-- 显示位置 -->
+
+    <RelativeLayout
+        android:id="@+id/part2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/part1"
+        android:gravity="center" >
+
+        <!-- 显示位置 -->
+
+        <TextView
+            android:id="@+id/detail_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000" />
+    </RelativeLayout>
+
+</RelativeLayout>

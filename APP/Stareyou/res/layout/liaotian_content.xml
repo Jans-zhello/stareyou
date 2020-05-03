@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/help_bg"
+    android:orientation="vertical" >
+
+    <!-- 聊天内容部分 -->
+
+    <RelativeLayout
+        android:id="@+id/liatian_center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- 与我聊天的用户头像 -->
+
+        <ImageView
+            android:id="@+id/liaotian_usericon"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher" />
+
+        <!-- 用户名 -->
+
+        <TextView
+            android:id="@+id/liaotian_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/liaotian_usericon"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <!-- 聊天最新内容 -->
+
+        <TextView
+            android:id="@+id/liaotian__content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/liaotian_usericon"
+            android:layout_below="@id/liaotian_username"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/liaotian_usericon"
+            android:textColor="#8B658B"
+            android:textSize="15sp" />
+        <!-- 时间 -->
+
+        <TextView
+            android:id="@+id/liaotian_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:textColor="#000000"
+            android:textSize="16dp" />
+    </RelativeLayout>
+</RelativeLayout>

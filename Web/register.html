@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+ <script type="text/javascript">
+function trimStr(str){return str.replace(/(^\s*)|(\s*$)/g,"");}
+  function checkit(){
+    if (form1.username.value=="" || trimStr(form1.username.value) =="" ) {
+         alert("用户名不能为空!");
+         form1.username.select();
+         return false;
+    }
+    if (form1.password.value=="" || trimStr(form1.password.value) =="") {
+         alert("密码不能为空!");
+         form1.password.select();
+         return false;
+    }
+    if (DataLength(form1.username.value)>20) {
+        alert('用户名不超过10个字符');
+        form1.username.select();
+        return false;
+    }
+     if (DataLength(form1.password.value)>40) {
+        alert('密码不超过20个字符');
+        form1.password.select();
+        return false;
+    }
+    if (form1.mail.value=="" || trimStr(form1.mail.value) =="") {
+         alert("邮箱不能为空!");
+         form1.mail.select();
+         return false;
+    }
+    if (form1.phone.value=="" || trimStr(form1.phone.value) =="") {
+         alert("手机号不能为空!");
+         form1.phone.select();
+         return false;
+    }
+    if (form1.address.value=="" || trimStr(form1.address.value) =="") {
+         alert("地址不能为空!");
+         form1.address.select();
+         return false;
+    }
+   if (form1.address.value.indexOf("省") == -1 || form1.address.value.indexOf("市")== -1)     {
+         alert("地址输入格式不正确!");
+         form1.address.select();
+         return false;
+    }
+    if (!checkmail(form1.mail.value) || trimStr(form1.mail.value) =="") {
+         alert("邮箱格式不正确");
+         form1.mail.select();
+         return false;
+    }
+    if (!checkphone(form1.phone.value) || trimStr(form1.phone.value) =="") {
+         alert("手机号格式不正确");
+         form1.phone.select();
+         return false;
+    } 
+    return true;
+  }
+  function DataLength(fData) 
+  { 
+    var intLength=0; 
+    for (var i=0;i<fData.length;i++) 
+    { 
+        if ((fData.charCodeAt(i) < 0) || (fData.charCodeAt(i) > 255)) 
+            intLength=intLength+2; 
+        else 
+            intLength=intLength+1;    
+    } 
+    return intLength; 
+}
+  function checkmail(mail){
+    var strs=mail;
+    var Expression = /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
+    var objExp = new RegExp(Expression);
+    if (objExp.test(strs)==true) {
+             return true;
+    }
+    return false;
+  }
+  function checkphone(phone){
+    var strs = phone;
+    var Expression = /^1\d{10}$/;
+    var objExp = new RegExp(Expression);
+    if (objExp.test(strs)==true) {
+             return true;
+    }
+     return false;
+  }
+ </script>
+    <meta charset="utf-8">
+	<title>stare you</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body style="background-size:100%;background-image:url(image/beijing.jpg);background-repeat: no-repeat;">
+  <div id="container">
+  <div id="register_set" style="border:1px black solid; ">
+   <form name="form1" action="service/register.php" method="post" onsubmit="return checkit()" >
+    <table  width="520" border="0" align="center">
+     <tr>
+      <td width="70"><span class="text_set">用户名:</span></td>
+      <td><input type="text" name="username" style=" width: 180px;height: 23px;"></td>
+      <td><span class="message_set">*必填(由1-10位数字、字母组成)</span></td>
+     </tr>
+     <tr>
+      <td><span class="text_set">密&emsp;码:</span></td>
+      <td><input type="text" name="password" style=" width: 180px;height: 23px; margin-top: 8px;"></td>
+      <td><span class="message_set">*必填(由1-20位数字、字母组成)</span></td>
+     </tr>
+      <tr>
+      <td><span class="text_set">性&emsp;别:</span></td>
+      <td><input type="radio" name="sex" value="男" style="margin-top: 8px;"checked >男
+      <input type="radio" name="sex" value="女" style="margin-top: 8px;" >女</td>
+     </tr>
+      <tr>
+      <td><span class="text_set">邮&emsp;箱:</span></td>
+      <td><input type="text" name="mail" style=" width: 180px;height: 23px; margin-top: 8px;" ></td>
+      <td><span class="message_set">*请输入邮箱</span></td>
+     </tr>
+      <tr>
+      <td><span class="text_set">手机号:</span></td>
+      <td><input type="text" name="phone" style=" width: 180px;height: 23px; margin-top: 8px;"></td>
+      <td><span class="message_set">*请输入手机号</span></td>
+     </tr>
+       <tr>
+      <td><span class="text_set">地&emsp;址:</span></td>
+      <td><textarea name="address" cols="25" style="margin-top: 8px;"></textarea></td>
+      <td><span class="message_set">*请输入地址(格式如:XXX省XXX市)</span></td>
+     </tr>
+     <tr>
+      <td><input type="submit" name="submit" value="注册" style="margin-top:20px; margin-left: 50px; width: 38px; height: 25px;"></td>
+      <td><input type="reset" name="reset" value="重置" style="margin-top:20px; margin-left: 20px; width: 38px;height: 25px;"></td>
+     </tr>
+    </table>
+   </form>
+  </div>
+  </div>
+  </body>
+  </html>

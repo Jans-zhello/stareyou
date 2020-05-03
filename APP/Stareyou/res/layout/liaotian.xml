@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/layout_title_liaotian"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/title_liaotian" />
+
+    <ListView
+        android:id="@+id/lv_liaotianmsg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/layout_title_liaotian"
+        android:cacheColorHint="#000000"
+        android:divider="@drawable/line"
+        android:dividerHeight="0.2dp"
+        android:scrollbars="vertical" />
+
+    <RelativeLayout
+        android:id="@+id/empty_text_tip_liaotian"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/layout_title_liaotian"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/no_content"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/no_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/no_content"
+            android:layout_toRightOf="@+id/no_content"
+            android:text="没有内容呀"
+            android:textColor="#EEEEE0"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

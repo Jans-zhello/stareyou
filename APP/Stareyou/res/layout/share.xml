@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/layout_title_share"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/title_share" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/share_linear_nav"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/haorenquan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/haorenquan"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/xiaoxi"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/xiaoxi"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <com.example.Stareyou.CustomIndicator
+        android:id="@+id/share_custom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        app:tab_color="#6A5ACD"
+        app:tab_number="2"
+        app:tab_width="80dp" >
+    </com.example.Stareyou.CustomIndicator>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/share_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

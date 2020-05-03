@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/help_bg"
+    android:orientation="vertical" >
+
+    <!-- 好人圈内容部分 -->
+
+    <RelativeLayout
+        android:id="@+id/part1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- 用户头像 -->
+
+        <ImageView
+            android:id="@+id/share_usericon"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/boy" />
+
+        <!-- 用户名 -->
+
+        <TextView
+            android:id="@+id/share_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/share_usericon"
+            android:text="##########"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+        <!-- 好人圈正文 -->
+
+        <TextView
+            android:id="@+id/goodperson_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/share_username"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/share_usericon"
+            android:textColor="#8B658B" />
+
+        <RelativeLayout
+            android:id="@+id/resource_else"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/goodperson_content"
+            android:layout_toRightOf="@id/share_usericon" >
+
+            <!-- 好人圈图片 -->
+
+            <ImageView
+                android:id="@+id/goodperson_content_img"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+                android:clickable="true"
+                android:src="@drawable/main_bg"
+                android:visibility="gone" 
+                />
+
+            <FrameLayout
+                android:id="@+id/haoren_frame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/goodperson_content_img" 
+                android:visibility="gone"
+                >
+
+                <!-- 好人圈视频 -->
+
+                <ImageView
+                    android:id="@+id/goodperson_content_video"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    android:src="@drawable/main_bg" />
+
+                <ImageView
+                    android:id="@+id/goodperson_content_video_play"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    android:src="@drawable/play_video" />
+            </FrameLayout>
+        </RelativeLayout>
+        <!-- 点赞 -->
+
+        <TextView
+            android:id="@+id/praise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resource_else"
+            android:layout_margin="7dp"
+            android:layout_toLeftOf="@id/shoucang"
+            android:clickable="true"
+            android:text="点赞"
+            android:textColor="#000"
+            android:textSize="19sp" />
+        <!-- 转发 -->
+
+        <TextView
+            android:id="@+id/zhuanfa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/resource_else"
+            android:layout_margin="7dp"
+            android:clickable="true"
+            android:text="转发"
+            android:textColor="#000"
+            android:textSize="19sp" />
+        <!-- 评论 -->
+
+        <TextView
+            android:id="@+id/pinglun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resource_else"
+            android:layout_margin="7dp"
+            android:layout_toLeftOf="@id/zhuanfa"
+            android:clickable="true"
+            android:text="评论"
+            android:textColor="#000"
+            android:textSize="19sp" />
+
+        <!-- 收藏 -->
+
+        <TextView
+            android:id="@+id/shoucang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resource_else"
+            android:layout_margin="7dp"
+            android:layout_toLeftOf="@id/pinglun"
+            android:clickable="true"
+            android:text="收藏"
+            android:textColor="#000"
+            android:textSize="19sp" />
+        <!-- 时间 -->
+
+        <TextView
+            android:id="@+id/share_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:text="昨天晚上"
+            android:textColor="#000000"
+            android:textSize="16dp" />
+    </RelativeLayout>
+    <!-- 显示位置 -->
+
+    <RelativeLayout
+        android:id="@+id/part2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/part1"
+        android:background="#E6E6FA"
+        android:gravity="center" >
+
+        <!-- 显示位置 -->
+
+        <TextView
+            android:id="@+id/detail_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#191970" />
+    </RelativeLayout>
+    <!-- 显示点赞等信息 -->
+
+    <RelativeLayout
+        android:id="@+id/part3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/part2" >
+
+        <!-- 点赞 -->
+
+        <RelativeLayout
+            android:id="@+id/part3_1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp" >
+
+            <TextView
+                android:id="@+id/praise_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="继续革命"
+                android:textColor="#8B658B"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/deng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/praise_user"
+                android:text="等"
+                android:textColor="#8B7355" />
+
+            <TextView
+                android:id="@+id/praise_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/deng"
+                android:text="1"
+                android:textColor="#8B658B" />
+
+            <TextView
+                android:id="@+id/praise_wei"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/praise_num"
+                android:text="人为它点赞"
+                android:textColor="#8B7355" />
+        </RelativeLayout>
+        <!-- 收藏 -->
+
+        <RelativeLayout
+            android:id="@+id/part3_2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/part3_1"
+            android:layout_margin="5dp" >
+
+            <TextView
+                android:id="@+id/shoucang_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="继续革命"
+                android:textColor="#8B658B"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/deng_shoucangs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/shoucang_user"
+                android:text="等"
+                android:textColor="#8B7355" />
+
+            <TextView
+                android:id="@+id/shoucang_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/deng_shoucangs"
+                android:text="1"
+                android:textColor="#8B658B" />
+
+            <TextView
+                android:id="@+id/shoucang_wei"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/shoucang_num"
+                android:text="人收藏了这篇文章"
+                android:textColor="#8B7355" />
+        </RelativeLayout>
+
+        <!-- 关注 -->
+
+        <RelativeLayout
+            android:id="@+id/part3_3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/part3_2"
+            android:layout_margin="5dp" >
+
+            <TextView
+                android:id="@+id/guanzhu_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="继续革命"
+                android:textColor="#8B658B"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/deng_guanzhu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/guanzhu_user"
+                android:text="等"
+                android:textColor="#8B7355" />
+
+            <TextView
+                android:id="@+id/guanzhu_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/deng_guanzhu"
+                android:text="1"
+                android:textColor="#8B658B" />
+
+            <TextView
+                android:id="@+id/shoucang_wei"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/guanzhu_num"
+                android:text="人关注了ta"
+                android:textColor="#8B7355" />
+        </RelativeLayout>
+        <!-- 转发 -->
+
+        <RelativeLayout
+            android:id="@+id/part3_4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/part3_3"
+            android:layout_margin="5dp" >
+
+            <TextView
+                android:id="@+id/zhuanfa_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="继续革命"
+                android:textColor="#8B658B"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/deng_zhuanfa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/zhuanfa_user"
+                android:text="等"
+                android:textColor="#8B7355" />
+
+            <TextView
+                android:id="@+id/zhuanfa_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/deng_zhuanfa"
+                android:text="1"
+                android:textColor="#8B658B" />
+
+            <TextView
+                android:id="@+id/zhuanfa_wei"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/zhuanfa_num"
+                android:text="人转发了这篇文章"
+                android:textColor="#8B7355" />
+        </RelativeLayout>
+        <!-- 评论 -->
+
+        <RelativeLayout
+            android:id="@+id/part3_5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/part3_4"
+            android:layout_margin="5dp" >
+
+            <ListView
+                android:id="@+id/lv_reviewperson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:cacheColorHint="#000000"
+                android:divider="@drawable/line"
+                android:dividerHeight="0.2dp"
+                android:scrollbars="vertical" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

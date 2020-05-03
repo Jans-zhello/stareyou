@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/center_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/center_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="您收藏于："
+                android:textColor="#8B658B" />
+
+            <TextView
+                android:id="@+id/center_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/center_tip"
+                android:textColor="#000" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/center_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/center_first"
+            android:layout_marginTop="5dp" >
+
+            <ImageView
+                android:id="@+id/center_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher" />
+
+            <TextView
+                android:id="@+id/center_usrname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/center_icon"
+                android:textColor="#8B658B" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/center_third"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/center_second"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/sendlist_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="XXXXXXXXXXXXXXXXX"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/sendlist_img1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@id/sendlist_content"
+                android:src="@drawable/ic_launcher" />
+
+            <FrameLayout
+                android:id="@+id/shoucang_frame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sendlist_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/sendlist_img1"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/sendlist_video1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_launcher" />
+
+                <ImageView
+                    android:id="@+id/collectionlist_content_video_play"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:clickable="true"
+                    android:src="@drawable/play_video" />
+            </FrameLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/sendlist_loc"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@id/center_third"
+            android:background="#F5F5F5"
+            android:gravity="center_horizontal"
+            android:text="XXXXXXXXX" />
+    </RelativeLayout>
+
+</RelativeLayout>

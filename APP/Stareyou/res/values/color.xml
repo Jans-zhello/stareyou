@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="main_color_white">#ffffff</color>
+    <color name="loan_butBackground">#E8E8E8</color>
+    <color name="color_text_radio">#ed6d48</color>
+    <color name="contacts_list_color">#000000</color>
+
+</resources>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+ <script type="text/javascript">
+function trimStr(str){return str.replace(/(^\s*)|(\s*$)/g,"");}
+  function checkit(){
+    if (form1.mail.value=="" || trimStr(form1.mail.value) =="") {
+         alert("邮箱不能为空!");
+         form1.mail.select();
+         return false;
+    }
+    if (form1.title.value=="" || trimStr(form1.title.value) =="") {
+         alert("标题不能为空!");
+         form1.title.select();
+         return false;
+    }
+    if (form1.content.value=="" || trimStr(form1.content.value) =="") {
+         alert("内容不能为空!");
+         form1.content.select();
+         return false;
+    }
+    if (!checkmail(form1.mail.value) || trimStr(form1.mail.value) =="") {
+         alert("邮箱格式不正确");
+         form1.mail.select();
+         return false;
+    }
+    if (DataLength(form1.title.value)>40) {
+        alert('标题不超过20字');
+        form1.title.select();
+        return false;
+    }
+    if (DataLength(form1.content.value)>400) {
+        alert('标题不超过200字');
+        form1.content.select();
+        return false;
+    } 
+    return true;
+  }
+  function DataLength(fData) 
+  { 
+    var intLength=0; 
+    for (var i=0;i<fData.length;i++) 
+    { 
+        if ((fData.charCodeAt(i) < 0) || (fData.charCodeAt(i) > 255)) 
+            intLength=intLength+2; 
+        else 
+            intLength=intLength+1;    
+    } 
+    return intLength; 
+} 
+  function checkmail(mail){
+    var strs=mail;
+    var Expression = /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
+    var objExp = new RegExp(Expression);
+    if (objExp.test(strs)==true) {
+             return true;
+    }
+    return false;
+  }
+ </script>
+    <meta charset="utf-8">
+	<title>stare you</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body style="background-size:100%;background-image:url(image/beijing.jpg);background-repeat: no-repeat;">
+    <div id="container">
+   <div id="register_set" style="border:1px black solid; ">
+    <div id="suggestion_text" style="text-align: center;font-size: 22px;margin-right: 25px;"><b>请&emsp;留&emsp;下&emsp;您&emsp;的&emsp;真&emsp;挚&emsp;建&emsp;议</b>
+   </div>
+   <form name="form1" action="service/suggestion.php" method="post" onsubmit="return checkit()">
+    <table  width="520" border="0" align="center" style="margin-top: 15px;">
+      <tr>
+      <td><span class="text_set">邮&emsp;箱:</span></td>
+      <td><input type="text" name="mail" style="width: 220px;height: 25px;font-size: 18px;margin-left:10px;" ></td>
+      <td><span class="message_set" style="margin-right: 40px;">*请输入您的邮箱</span></td>
+     </tr>
+      <tr>
+      <td><span class="text_set">标&emsp;题:</span></td>
+      <td><input type="text" name="title" style="width: 220px;height: 25px;font-size: 18px;margin-top: 10px;margin-left:10px;"></td>
+      <td><span class="message_set" style="position: absolute;left: 770px;">*标题不超过20字</span></td>
+     </tr>
+       <tr>
+      <td><span class="text_set">内&emsp;容:</span></td>
+      <td><textarea name="content" cols="25" style="width: 280px;height: 80px;font-size: 15px;margin-top: 10px;margin-left:10px;"></textarea></td> 
+      <td><span class="message_set" style="position: absolute;left: 775px;">*不超过200字</span></td>
+     </tr>
+     <tr>
+      <td><input type="submit" name="submit" value="提交" style="width: 50px; height: 30px;position: relative;left: 300px;top:1px;"></td>
+     </tr>
+    </table>
+   </form>
+  </div>
+  </div>
+  </body>
+  </html>

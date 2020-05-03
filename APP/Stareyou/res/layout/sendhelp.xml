@@ -1,0 +1,226 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:id="@+id/sd_1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#E8E8E8" >
+
+        <!-- 返回图标 -->
+
+        <ImageView
+            android:id="@+id/s_back"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/send_help_overalltitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/send_help"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <!-- 帮助标题 -->
+
+    <RelativeLayout
+        android:id="@+id/send_help_title"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/sd_1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp" >
+
+        <EditText
+            android:id="@+id/input_title_help"
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:background="@drawable/security_code_bg"
+            android:gravity="left|top"
+            android:hint="@string/send_help_title"
+            android:lines="1"
+            android:maxLength="15"
+            android:paddingTop="5dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="15sp" />
+
+        <requestFocus />
+    </RelativeLayout>
+    <!-- 输入正文 -->
+
+    <RelativeLayout
+        android:id="@+id/send_help_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/send_help_title" >
+
+        <EditText
+            android:id="@+id/input_content_help"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/security_code_bg"
+            android:gravity="left|top"
+            android:hint="@string/send_help_content"
+            android:lines="16"
+            android:maxLength="140"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="17sp" >
+        </EditText>
+
+        <ImageView
+            android:id="@+id/send_help_else"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@id/input_content_help"
+            android:layout_alignLeft="@id/input_content_help"
+            android:src="@drawable/inserthelp" />
+
+        <ImageView
+            android:id="@+id/send_help_else_photo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@id/send_help_else"
+            android:layout_toRightOf="@id/send_help_else"
+            android:src="@drawable/inserthelp"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/send_help_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/send_help_else"
+            android:layout_toRightOf="@id/send_help_else_photo"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/send_help_else_video"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/inserthelp" />
+
+            <ImageView
+                android:id="@+id/send_help_else_video_play"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/play_video" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <!-- 手机号 -->
+
+    <RelativeLayout
+        android:id="@+id/send_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/send_help_content"
+        android:layout_marginTop="10dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="21" >
+
+            <TextView
+                android:id="@+id/phone_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:text="@string/phone_help"
+                android:textColor="#191970"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/getshouji"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="20"
+                android:background="@drawable/security_code_bg"
+                android:focusable="false"
+                android:lines="2"
+                android:paddingTop="5dp"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </RelativeLayout>
+    <!-- 位置 -->
+
+    <RelativeLayout
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/send_phone"
+        android:layout_marginTop="5dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/location_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="@string/location"
+                android:textColor="#191970"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/location_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:clickable="true"
+                android:paddingLeft="10dp"
+                android:src="@drawable/off" />
+        </LinearLayout>
+    </RelativeLayout>
+    <!-- 位置详细信息显示 -->
+
+    <RelativeLayout
+        android:id="@+id/location_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/location"
+        android:layout_marginTop="3dp"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/location_msg_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/send_help_btn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/location_msg"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/buttonshape"
+        android:gravity="center"
+        android:text="@string/send_help_out"
+        android:textColor="@color/main_color_white"
+        android:textSize="18sp" />
+
+</RelativeLayout>

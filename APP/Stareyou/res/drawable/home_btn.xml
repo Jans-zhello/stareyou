@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 添加主页按钮按下时的样式文件 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/main_btn_bg" android:state_checked="true" android:state_enabled="true"/>
+    <item android:drawable="@drawable/main_btn_bg" android:state_enabled="true" android:state_pressed="true"/>
+
+</selector>

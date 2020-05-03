@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/help_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/helpmsg_part"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- 订单专属头像 -->
+
+        <ImageView
+            android:id="@+id/stareyou_img"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher" />
+
+        <!-- 帮助人用户名 -->
+
+        <TextView
+            android:id="@+id/help_user_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/stareyou_img"
+            android:textColor="#8B658B"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/yuanyi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/help_user_1"
+            android:text="愿意帮助"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <!-- 被帮助人的用户名 -->
+
+        <TextView
+            android:id="@+id/help_user_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/yuanyi"
+            android:textColor="#8B658B"
+            android:textSize="18sp" />
+        <!-- 帮助标题 -->
+
+        <TextView
+            android:id="@+id/title_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/stareyou_img"
+            android:layout_below="@id/help_user_1"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/stareyou_img"
+            android:textColor="#8B658B"
+            android:textSize="16sp" />
+        <!-- 时间 -->
+
+        <TextView
+            android:id="@+id/order_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:textColor="#000000"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+    <!-- 剩余确认时间 -->
+
+    <RelativeLayout
+        android:id="@+id/helpmsg_part2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/helpmsg_part" >
+
+        <TextView
+            android:id="@+id/haisheng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="剩余"
+            android:textColor="#efa608"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/num_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/haisheng"
+            android:textColor="#000"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/zidongqueren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/num_day"
+            android:text="自动确认"
+            android:textColor="#efa608"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/helped_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/helpmsg_part2"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/buttonshape"
+        android:text="确认受到帮助"
+        android:textColor="@color/main_color_white" />
+
+</RelativeLayout>

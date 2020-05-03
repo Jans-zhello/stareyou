@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical" 
+    android:layout_gravity="center"
+    >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#000" >
+
+        <ImageView
+            android:id="@+id/v_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/btn_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="个人信息"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/view_userinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:stretchColumns="0" >
+
+        <TableRow android:layout_margin="5dp" >
+
+            <TextView
+                android:id="@+id/view_user_info_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="头像"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/view_user_info_icon_detail"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_launcher" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#BEBEBE" />
+
+        <TableRow android:layout_margin="5dp" >
+
+            <TextView
+                android:id="@+id/view_user_info_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="昵称"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/view_user_info_name_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="继续革命"
+                android:textColor="#000" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#BEBEBE" />
+
+        <TableRow android:layout_margin="5dp" >
+
+            <TextView
+                android:id="@+id/view_user_info_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="账号"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/view_user_info_account_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="648042475"
+                android:textColor="#000" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#BEBEBE" />
+
+        <TableRow android:layout_margin="5dp" >
+
+            <TextView
+                android:id="@+id/view_user_info_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="性别"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/view_user_info_sex_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="男"
+                android:textColor="#000" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#BEBEBE" />
+
+        <TableRow android:layout_margin="5dp" >
+
+            <TextView
+                android:id="@+id/view_user_info_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="手机号"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/view_user_info_phone_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18337398326"
+                android:textColor="#000" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#BEBEBE" />
+
+        <TableRow android:layout_margin="5dp" >
+
+            <TextView
+                android:id="@+id/view_user_info_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="注册时间"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/view_user_info_date_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2018-02-25"
+                android:textColor="#000" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#BEBEBE" />
+    </TableLayout>
+
+</LinearLayout>

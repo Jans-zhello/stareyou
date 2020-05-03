@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <!-- 返回图标 -->
+
+    <ImageView
+        android:id="@+id/suggestion_back"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:src="@drawable/back" />
+
+    <EditText
+        android:id="@+id/suggestion_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/security_code_bg"
+        android:gravity="left|top"
+        android:hint="@string/send_help_content"
+        android:lines="11"
+        android:maxLength="100"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:textColorHint="#000000" >
+    </EditText>
+
+    <Button
+        android:id="@+id/suggestion_out"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/buttonshape"
+        android:gravity="center"
+        android:textSize="17sp"
+        android:text="提交建议"
+        android:textColor="@color/main_color_white" />
+
+</LinearLayout>
